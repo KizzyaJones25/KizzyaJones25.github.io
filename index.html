@@ -3,205 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kizzya Jones | Data Science Portfolio</title>
 
     <style>
-
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f7f9fc;
-            color:#333;
-            line-height:1.6;
+        :root {
+            --primary-blue: #6fa8dc;
+            --dark-blue: #2f5f87;
+            --light-blue: #eaf4fc;
+            --background: #f8fbfe;
+            --text-dark: #263442;
+            --text-light: #5f6f7d;
+            --white: #ffffff;
+            --border: #d9e8f5;
         }
 
-        header{
-
-            background:#1f4e79;
-            color:white;
-            text-align:center;
-            padding:80px 20px;
-
+        * {
+            box-sizing: border-box;
         }
 
-        header h1{
-
-            font-size:48px;
-            margin-bottom:10px;
-
+        html {
+            scroll-behavior: smooth;
         }
 
-        header h2{
-
-            font-weight:normal;
-            margin-top:0;
-
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.7;
         }
 
-        header p{
+        /* Navigation */
 
-            max-width:700px;
-            margin:auto;
-
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .button{
-
-            display:inline-block;
-            margin-top:25px;
-            padding:14px 28px;
-            background:white;
-            color:#1f4e79;
-            text-decoration:none;
-            font-weight:bold;
-            border-radius:5px;
-
+        .logo {
+            color: var(--dark-blue);
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
         }
 
-        section{
-
-            max-width:1100px;
-            margin:auto;
-            padding:60px 30px;
-
+        .nav-links {
+            display: flex;
+            gap: 24px;
         }
 
-        h3{
-
-            color:#1f4e79;
-            font-size:30px;
-
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
         }
 
-        .cards{
-
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-
+        .nav-links a:hover {
+            color: var(--primary-blue);
         }
 
-        .card{
+        /* Hero section */
 
-            background:white;
-            padding:25px;
-            border-radius:10px;
-            box-shadow:0 3px 10px rgba(0,0,0,.1);
-
+        .hero {
+            background: linear-gradient(135deg, #dbeefe, #8fc1e8);
+            min-height: 520px;
+            padding: 90px 10%;
+            display: flex;
+            align-items: center;
         }
 
-        footer{
-
-            background:#1f4e79;
-            color:white;
-            text-align:center;
-            padding:30px;
-
+        .hero-content {
+            max-width: 760px;
         }
 
+        .hero-label {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: var(--dark-blue);
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            color: #244b6b;
+            font-size: 56px;
+            line-height: 1.15;
+        }
+
+        .hero h2 {
+            margin: 14px 0 18px;
+            color: var(--dark-blue);
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin-bottom: 30px;
+            color: #314b60;
+            font-size: 19px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-button:hover {
+            background-color: #244b6b;
+        }
+
+        /* General sections */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 75px 30px;
+        }
+
+        .section-heading {
+            margin-bottom: 30px;
+        }
+
+        .section-heading span {
+            color: var(--primary-blue);
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 5px 0 0;
+            color: var(--dark-blue);
+            font-size: 34px;
+        }
+
+        /* About */
+
+        .about-container {
+            background-color: var(--white);
+            border-left: 6px solid var(--primary-blue);
+            border-radius: 8px;
+            padding: 35px;
+            box-shadow: 0 6px 20px rgba(71, 107, 138, 0.08);
+        }
+
+        .about-container p {
+            margin-top: 0;
+            color: var(--text-light);
+            font-size: 17px;
+        }
+
+        .about-container p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Projects */
+
+        #projects {
+            background-color: var(--light-blue);
+            max-width: none;
+        }
+
+        .projects-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 28px;
+            min-height: 245px;
+            box-shadow: 0 5px 16px rgba(71, 107, 138, 0.08);
+        }
+
+        .project-number {
+            color: var(--primary-blue);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-card h3 {
+            color: var(--dark-blue);
+            margin: 12px 0;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .project-status {
+            color: var(--dark-blue);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Skills */
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            color: var(--dark-blue);
+            padding: 10px 17px;
+            border-radius: 22px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Contact */
+
+        .contact-box {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        .contact-box p {
+            max-width: 680px;
+        }
+
+        .contact-links {
+            margin-top: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .contact-links a {
+            background-color: var(--white);
+            color: var(--dark-blue);
+            padding: 11px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #244b6b;
+            color: var(--white);
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        /* Mobile responsiveness */
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 75px 30px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
-
 </head>
 
 <body>
 
-<header>
+    <nav>
+        <a href="#home" class="logo">Kizzya Jones</a>
 
-<h1>Kizzya Jones</h1>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<h2>MS Data Science Candidate</h2>
+    <header class="hero" id="home">
+        <div class="hero-content">
 
-<p>
+            <span class="hero-label">Data Science Portfolio</span>
 
-Applying AI and data science to solve real-world business challenges through machine learning, predictive analytics, and generative AI.
+            <h1>Kizzya Jones</h1>
 
-</p>
+            <h2>Master of Science in Data Science Candidate</h2>
 
-<a href="#projects" class="button">View Projects</a>
+            <p>
+                Applying artificial intelligence and data science to solve
+                real-world business challenges through machine learning,
+                predictive analytics, and clear communication.
+            </p>
 
-</header>
+            <a href="#projects" class="hero-button">Explore My Work</a>
 
-<section>
+        </div>
+    </header>
 
-<h3>About Me</h3>
+    <section id="about">
 
-<p>
+        <div class="section-heading">
+            <span>My Background</span>
+            <h2>About Me</h2>
+        </div>
 
-Hello! I'm currently completing my Master of Science in Data Science. My projects focus on applying machine learning, predictive analytics, data visualization, and generative AI to solve practical business problems. Before transitioning into data science, I built a career in financial services, where I developed strong analytical and problem-solving skills that continue to shape the way I approach data-driven decision making.
+        <div class="about-container">
 
-</p>
+            <p>
+                Hello! I am Kizzya Jones, a Master of Science in Data Science
+                candidate with an interest in using data and artificial
+                intelligence to solve practical business problems.
+            </p>
 
-</section>
+            <p>
+                Throughout my graduate program, I have developed experience in
+                machine learning, predictive analytics, data visualization,
+                natural language processing, and generative AI. My coursework
+                and projects have given me opportunities to work with real-world
+                datasets, compare modeling techniques, evaluate results, and
+                communicate findings to technical and nontechnical audiences.
+            </p>
 
-<section id="projects">
+            <p>
+                Before transitioning into data science, I built my professional
+                experience in financial services. That background strengthened
+                my analytical thinking, problem-solving, communication, and
+                attention to detail. It also taught me the importance of making
+                information understandable and useful for the people who rely
+                on it to make decisions.
+            </p>
 
-<h3>Featured Projects</h3>
+            <p>
+                As I continue building my portfolio, my goal is to demonstrate
+                how data science and AI can be applied beyond the classroom to
+                address meaningful challenges in business, public health,
+                finance, and other data-driven industries.
+            </p>
 
-<div class="cards">
+        </div>
+    </section>
 
-<div class="card">
+    <section id="projects">
 
-<h4>Restaurant Inspection Risk Prediction</h4>
+        <div class="projects-inner">
 
-<p>
+            <div class="section-heading">
+                <span>Selected Work</span>
+                <h2>Featured Projects</h2>
+            </div>
 
-Machine learning models developed using Florida restaurant inspection data to predict unfavorable inspection outcomes.
+            <div class="project-grid">
 
-</p>
+                <article class="project-card">
+                    <span class="project-number">Project 01</span>
 
-</div>
+                    <h3>Restaurant Inspection Risk Prediction</h3>
 
-<div class="card">
+                    <p>
+                        A supervised machine learning project using Florida
+                        restaurant inspection data to predict unfavorable
+                        inspection outcomes and support inspection prioritization.
+                    </p>
 
-<h4>Childcare Cost Predictive Analytics Dashboard</h4>
+                    <span class="project-status">
+                        Project details will be added in a future milestone.
+                    </span>
+                </article>
 
-<p>
+                <article class="project-card">
+                    <span class="project-number">Project 02</span>
 
-Interactive dashboard analyzing childcare cost trends through predictive analytics and data visualization.
+                    <h3>Childcare Cost Predictive Analytics</h3>
 
-</p>
+                    <p>
+                        A data visualization and predictive analytics project
+                        examining childcare cost trends and communicating
+                        findings through a dashboard and executive presentation.
+                    </p>
 
-</div>
+                    <span class="project-status">
+                        Project details will be added in a future milestone.
+                    </span>
+                </article>
 
-<div class="card">
+                <article class="project-card">
+                    <span class="project-number">Project 03</span>
 
-<h4>Ames Housing Price Prediction</h4>
+                    <h3>Ames Housing Price Prediction</h3>
 
-<p>
+                    <p>
+                        A regression modeling project developed to predict
+                        residential property values and identify the features
+                        that most strongly influence home prices.
+                    </p>
 
-Regression models developed to estimate residential home prices using property characteristics.
+                    <span class="project-status">
+                        Project details will be added in a future milestone.
+                    </span>
+                </article>
 
-</p>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <section id="skills">
 
-</div>
+        <div class="section-heading">
+            <span>Technical Foundation</span>
+            <h2>Skills and Tools</h2>
+        </div>
 
-</section>
+        <div class="skills-list">
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Predictive Analytics</span>
+            <span class="skill">Generative AI</span>
+            <span class="skill">Natural Language Processing</span>
+            <span class="skill">Tableau</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">Scikit-learn</span>
+            <span class="skill">JupyterLab</span>
+            <span class="skill">GitHub</span>
+        </div>
 
-<section>
+    </section>
 
-<h3>Technical Skills</h3>
+    <section id="contact">
 
-<p>
+        <div class="contact-box">
 
-Python • SQL • Machine Learning • Predictive Analytics • Tableau • Generative AI • Scikit-learn • GitHub • JupyterLab
+            <h2>Contact</h2>
 
-</p>
+            <p>
+                This section will provide ways to connect with me and learn
+                more about my professional experience and data science work.
+            </p>
 
-</section>
+            <div class="contact-links">
+                <a href="https://github.com/KizzyaJones25"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
 
-<footer>
+                <a href="#" aria-label="LinkedIn profile placeholder">
+                    LinkedIn
+                </a>
 
-<p>
+                <a href="#" aria-label="Email placeholder">
+                    Email
+                </a>
+            </div>
 
-© 2026 Kizzya Jones
+        </div>
+    </section>
 
-</p>
-
-</footer>
+    <footer>
+        <p>&copy; 2026 Kizzya Jones | Data Science Portfolio</p>
+    </footer>
 
 </body>
-
 </html>
-
