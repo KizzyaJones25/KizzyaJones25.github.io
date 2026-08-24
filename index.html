@@ -201,4 +201,547 @@
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 28px;
-            min-height: 
+            min-height: 270px;
+            box-shadow: 0 5px 16px rgba(71, 107, 138, 0.08);
+        }
+
+        .project-number {
+            color: var(--primary-blue);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-card h3 {
+            color: var(--dark-blue);
+            margin: 12px 0;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--dark-blue);
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Skills */
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            color: var(--dark-blue);
+            padding: 10px 17px;
+            border-radius: 22px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Contact */
+
+        .contact-box {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        .contact-box p {
+            max-width: 680px;
+        }
+
+        .contact-links {
+            margin-top: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .contact-links a {
+            background-color: var(--white);
+            color: var(--dark-blue);
+            padding: 11px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-links a:hover {
+            background-color: var(--light-blue);
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #244b6b;
+            color: var(--white);
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsiveness */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 75px 30px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="#home" class="logo">Kizzya Jones</a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero -->
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="hero-label">Data Science Portfolio</span>
+
+            <h1>Mrs. Kizzya Jones</h1>
+
+            <h2>Master of Science in Data Science</h2>
+
+            <p>
+                Applying artificial intelligence and data science to solve
+                real-world business challenges through machine learning,
+                predictive analytics, and clear communication.
+            </p>
+
+            <a href="#projects" class="hero-button">
+                Explore My Work
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <div class="section-heading">
+            <span>My Background</span>
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-container">
+
+            <p>
+                Hello! I am Kizzya Jones, a Master of Science in Data Science
+                candidate with an interest in using data and artificial
+                intelligence to solve practical business problems.
+            </p>
+
+            <p>
+                Throughout my graduate program, I have developed experience in
+                machine learning, predictive analytics, data visualization,
+                natural language processing, and generative AI. My coursework
+                and projects have given me opportunities to work with real-world
+                datasets, compare modeling techniques, evaluate results, and
+                communicate findings to technical and nontechnical audiences.
+            </p>
+
+            <p>
+                Before transitioning into data science, I built my professional
+                experience in financial services. That background strengthened
+                my analytical thinking, problem-solving, communication, and
+                attention to detail. It also taught me the importance of making
+                information understandable and useful for the people who rely
+                on it to make decisions.
+            </p>
+
+            <p>
+                As I continue building my portfolio, my goal is to demonstrate
+                how data science and AI can be applied beyond the classroom to
+                address meaningful challenges in business, public health,
+                finance, and other data-driven industries.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <div class="projects-inner">
+
+            <div class="section-heading">
+                <span>My Work</span>
+                <h2>Projects</h2>
+            </div>
+
+            <div class="project-grid">
+
+                <!-- Project 01 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 01</span>
+
+                    <h3>Restaurant Inspection Risk Prediction</h3>
+
+                    <p>
+                        Developed supervised machine learning models using
+                        Florida restaurant inspection data to predict
+                        unfavorable inspection outcomes and support
+                        inspection prioritization.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 02 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 02</span>
+
+                    <h3>Childcare Cost Predictive Analytics Dashboard</h3>
+
+                    <p>
+                        Created a dashboard, infographic, and executive
+                        presentation analyzing childcare cost trends using
+                        predictive analytics and data visualization techniques.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 03 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 03</span>
+
+                    <h3>Ames Housing Price Prediction</h3>
+
+                    <p>
+                        Built regression models using the Ames Housing dataset
+                        to predict residential housing prices while evaluating
+                        model performance and important property characteristics.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 04 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 04</span>
+
+                    <h3>Energy Consumption Forecasting</h3>
+
+                    <p>
+                        Developed predictive models using historical energy
+                        consumption and weather data to forecast future
+                        electricity demand.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 05 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 05</span>
+
+                    <h3>Movie Recommendation System</h3>
+
+                    <p>
+                        Implemented an item-based collaborative filtering
+                        recommendation system using the MovieLens dataset
+                        to recommend similar movies.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 06 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 06</span>
+
+                    <h3>IMDB Sentiment Analysis</h3>
+
+                    <p>
+                        Applied natural language processing techniques and
+                        machine learning algorithms to classify movie reviews
+                        as positive or negative.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 07 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 07</span>
+
+                    <h3>MNIST CNN Image Classification</h3>
+
+                    <p>
+                        Built a convolutional neural network to classify
+                        handwritten digits from the MNIST dataset and
+                        evaluated its classification performance.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 08 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 08</span>
+
+                    <h3>TSA Complaint Storytelling</h3>
+
+                    <p>
+                        Analyzed TSA complaint data and developed
+                        visualizations to communicate trends, findings,
+                        and recommendations to decision-makers.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 09 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 09</span>
+
+                    <h3>Retail Sales Forecasting</h3>
+
+                    <p>
+                        Developed time series forecasting models using
+                        historical sales data to predict future retail
+                        sales trends.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 10 -->
+
+                <article class="project-card">
+
+                    <span class="project-number">Project 10</span>
+
+                    <h3>Customer Attendance Prediction</h3>
+
+                    <p>
+                        Built predictive models to estimate customer
+                        attendance patterns and identify factors
+                        influencing demand.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project on GitHub →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <div class="section-heading">
+            <span>Technical Foundation</span>
+            <h2>Skills and Tools</h2>
+        </div>
+
+        <div class="skills-list">
+
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Predictive Analytics</span>
+            <span class="skill">Generative AI</span>
+            <span class="skill">Natural Language Processing</span>
+            <span class="skill">Tableau</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">Scikit-learn</span>
+            <span class="skill">JupyterLab</span>
+            <span class="skill">GitHub</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <div class="contact-box">
+
+            <h2>Contact</h2>
+
+            <p>
+                Thank you for visiting my portfolio. Feel free to connect
+                with me through GitHub, LinkedIn, or email as I continue
+                building my experience in data science and artificial
+                intelligence.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="https://github.com/KizzyaJones25"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <!-- Add your LinkedIn URL here -->
+                <a href="#"
+                   aria-label="LinkedIn profile">
+                    LinkedIn
+                </a>
+
+                <!-- Add your email address here -->
+                <a href="#"
+                   aria-label="Email">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Kizzya Jones | Data Science Portfolio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
